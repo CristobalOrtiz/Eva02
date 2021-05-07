@@ -145,6 +145,20 @@ background-image: url("../img/fuegos.png");
 
 }
 
+.login{
+
+  font-size: 25px;
+  text-align: center;
+  color: #fff;
+  padding: 70px;
+  margin-bottom: 500px;
+}
+
+.eleso{
+  font-size: 50px;
+  margin-bottom: 80px;
+}
+
 
 
   

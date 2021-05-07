@@ -13,6 +13,8 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
         crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>>
     <link rel="stylesheet" href="ESTAIL/estail.css">
 </head>
 
@@ -45,6 +47,9 @@
                         <li class="nav-item">
                             <a class="nav-link" href="formulario.html" style="color:white">Registro Usuario</a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html" style="color:white" ;>Inicio Sesión</a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -58,7 +63,9 @@
                 <input type="date" id="FechaNacimiento" name="FechaNacimiento" min="1950-01-01" max="2000-01-01">
                 <br><br>
                 <label>Rut</label>
-                
+                <input id="rut" required="required" type="text" name="shippingRut"
+                placeholder="Rut 12345678-9" maxlength="10">
+                <span id="error-rut" style="display:none;color:red">Rut no es válido o no se ingresó en el formato 11111111-1</span>
                 
             </fieldset>
             <br><br>
@@ -66,7 +73,7 @@
             <fieldset>
                 <legend>Contacto </legend>
                 <label for="email">Correo Electronico:</label>
-                <input type="email" id="email" name="email">
+                <input type="email" id="email" name="email" required>
                 <br><br>
                 <label for="numero"> Telefono: </label>
                 <input type="number" name="numero" id="num" value="" min="10000000" max="99999999"
@@ -76,32 +83,33 @@
             <fieldset>
                 <legend>Direccion </legend>
                 <label for="fdireccion"> Direccion: </label>
-                <input type="text" name="direccion" id="direc" value="">
+                <input type="text" name="direccion" id="direc" value="" required>
                 <br><br>
                 <label for="postalcode"> Codigo postal: </label>
-                <input type="text" name="postalcode" id="direc" value="">
+                <input type="text" name="postalcode" id="direc" value="" required>
                 <br><br>
             </fieldset>
             <fieldset>
                 <legend>Tipo de recibo </legend>
-                <input type="radio" id="Boleta" name="sexo" value="Boleta">
+                <input type="radio" id="Boleta" name="sexo" value="Boleta" required>
                 <label for="Boleta">Boleta</label>
-                <input type="radio" id="Factura" name="sexo" value="Factura">
+                <input type="radio" id="Factura" name="sexo" value="Factura"required>
                 <label for="Factura">Factura</label>
                 <br><br>
             </fieldset>
             <div class="derecha">
                 <!--Boton para mandar alertas-->
-
-                <input type="button" onclick="alert('Aaahhh....Onichan *Se Sonroja*')" value="Tocame">
-
+                <button class="btn btn-warning" onclick="alert('oni cha..... *se moja*')" value="Tocame"> Tócame </button>
                 <!--Botones generales-->
-                <input type="submit" value="Continuar"> <input type="reset" value="Limpiar">
+                <button class="btn btn-warning" type="submit">Continuar</button>
+                <button class="btn btn-warning" type="reset">Limpiar</button>
+                <br><br>
             </div>
-            <br><br>
+           
 
-        </div>
+        
         </form>
+    </div>
         <!-- inicio footer-->
         <footer class="py-5 bg-dark">
             <div class="container">
@@ -149,10 +157,48 @@
         </footer>
         <!-- final de footer -->
         <!-- Esto es un jquery -->
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-        <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+
         <script>
-            
+            $(document).ready(function () {
+        var Fn = {
+            validaRut: function (rutCompleto) {
+                if (!/^[0-9]+[-|‐]{1}[0-9kK]{1}$/.test(rutCompleto))
+                    return false;
+                var tmp = rutCompleto.split('-');
+                var digv = tmp[1];
+                var rut = tmp[0];
+                if (digv == 'K') digv = 'k';
+                return (Fn.dv(rut) == digv);
+            },
+            dv: function (T) {
+                var M = 0, S = 1;
+                for (; T; T = Math.floor(T / 10))
+                    S = (S + T % 10 * (9 - M++ % 6)) % 11;
+                return S ? S - 1 : 'k';
+            }
+        }
+
+        $("#rut").change(function () {
+            $('#rut').val($('#rut').val().toUpperCase());
+            if (Fn.validaRut($("#rut").val())) {
+                $("#error-rut").hide();
+            } else {
+                $("#error-rut").show();
+                $("#rut").text("");
+            }
+        });
+
+        $("#checkout-form").submit(function (event) {
+            if (Fn.validaRut($("#rut").val())) {
+                $('#rut').val($('#rut').val().toUpperCase());
+                return true;
+            }
+            else {
+                event.preventDefault();
+            }
+
+        });
+    });
 
         </script>
 </body>

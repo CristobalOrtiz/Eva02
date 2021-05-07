@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="ESTAIL/estail.css">
 </head>
 
-<body class="imgfondo text-white ">
+<body class="imgfondo">
 
     <div class="container fondoDiv">
         <!-- Content here -->
@@ -51,63 +51,35 @@
                     </ul>
                 </div>
             </div>
-    </div>
-    </nav>
-    <!-- < Fin del navbar> -->
+        </nav>
+        <div class="lineas container fondoDiv login">
 
-
-    <form class="lineas container fondoDiv" name="datos" method="POST" action="completo.html">
-
-        <div>
-            <legend>Informacion de usuario </legend>
-            <label for="fname"> Nombre: </label>
-            <input type="text" name="nombre" id="nom" value="" autofocus required>
+            <legend class="eleso">Inicio de Sesión </legend>
+            <br>
+            <label for="email">Correo Electronico:</label>
+            <br>
+            <br>
+            <div class=" text-center">
+            <input type="email" id="email" name="email" autofocus required>
+            </div>
+            <br>
+            <label for="password"> Clave: </label>
+            <br>
+            <br>
+            <div class=" text-center">
+            <input type="password" name="password" id="pass" value=""  minlength="7"
+                maxlength="12" required>
+            </div>
             <br><br>
-            <label for="lapellido"> Apellido: </label>
-            <input type="text" name="apellido" id="ape" value="" required>
-            <br><br>
-            <label for="password"> Password: </label>
-            <input type="password" name="password" id="pass" value="" minlength="7" maxlength="12" required>
+            <div class="text-center">
+                <!--Boton para mandar alertas-->
+                <button class="btn btn-warning" onclick="alert('uwu *c ekzita*')" value="Tocame"> Tócame </button>
+                <!--Botones generales-->
+                <button class="btn btn-warning" type="submit">Iniciar</button>
+                     
+                <br><br>
+            </div>
         </div>
-        <br><br>
-
-        <div>
-            <legend>Genero </legend>
-            <label for="lgenero">Ingrese genero: </label>
-            <input type="radio" id="Hombre" name="sexo" value="Hombre">
-            <label for="Hombre">Hombre</label>
-            <input type="radio" id="Mujer" name="sexo" value="Mujer">
-            <label for="Mujer">Mujer</label>
-            <input type="radio" id="Otros" name="sexo" value="Otros">
-            <label for="Otros">Otros</label>
-        </div>
-        <br><br>
-
-        <div>
-            <legend>Tipo de usuario </legend>
-
-            <input type="radio" id="Permanente" name="usuario1" value="Permanente">
-            <label for="Permanente"> Usuario permanente</label>
-            <input type="radio" id="Invitado" name="usuario1" value="Invitado">
-            <label for="Invitado"> Invitado</label>
-
-        </div>
-        <br><br>
-
-
-
-        <div class="derecha">
-            <!--Boton para mandar alertas-->
-            <button class="btn btn-warning" onclick="alert('Aaahhh....Onichan *Se Sonroja*')" value="Tocame"> Tócame </button>
-            <!--Botones generales-->
-            <button class="btn btn-warning" type="submit">Continuar</button>
-                 <button class="btn btn-warning" type="reset">Limpiar</button>
-            <br><br>
-        </div>
-
-
-
-    </form>
     </div>
 
     <!-- inicio footer-->
@@ -153,33 +125,8 @@
 
             </div>
         </div>
-
     </footer>
     <!-- final de footer -->
-
-
-    <!-- Esto es un jquery para desiciones-->
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-
-    <script>
-        jQuery(document).ready(function ($) {
-            var form = $('form[name="datos"]'),
-                radio = $('input[name="usuario1"]'),
-                choice = '';
-
-            radio.change(function (e) {
-                choice = this.value;
-
-                if (choice === 'Permanente') {
-                    form.attr('action', 'completo.html');
-                } else {
-                    form.attr('action', 'fotos.html');
-                }
-            });
-        });
-    </script>
-    <!-- Fin del jquery-->
 </body>
 
 </html>
