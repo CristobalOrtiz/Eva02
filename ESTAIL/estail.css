@@ -121,7 +121,7 @@ hr{
     border-style: double;
     margin-bottom: 25px;
     margin-top: 25px;
-
+s
 }
 
 fieldset{
@@ -132,6 +132,17 @@ fieldset{
   border-color: #fff;
   border-width: 10px;
     border-radius: 20px;
+}
+
+.congrats{
+
+font-size: 70px;
+padding: 200px;
+color: #fff;
+text-align: center;
+background-image: url("../img/fuegos.png");
+
+
 }
 
 
