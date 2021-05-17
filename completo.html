@@ -62,46 +62,47 @@
         </nav>
 
         <form class="lineas container fondoDiv" name="datos2" id="datos2" method="POST" action="felicidades.html">
-
+           
             <fieldset>
                 <legend>Informacion personal </legend>
-                <label for="FechaNacimiento">Fecha de nacimiento:</label>
-                <input type="date" id="FechaNacimiento" name="FechaNacimiento" min="1950-01-01" max="2000-01-01">
+                <label for="FechaNacimiento">Fecha de nacimiento:</label><br>
+                <input class="largotext" type="date" id="FechaNacimiento" name="FechaNacimiento" min="1950-01-01" max="2000-01-01">
                 <br><br>
-                <label>Rut</label>
-                <input id="rut" required="required" type="text" name="shippingRut" placeholder="Rut 12345678-9"
+                <label>Rut</label><br>
+                <input class="largotext" id="rut" required="required" type="text" name="shippingRut" placeholder="Rut 12345678-9"
                     maxlength="10">
                 <span class="rut" id="error-rut" style="display:none;color:red">Rut no es válido o no se ingresó en el formato
                     11111111-1</span>
                     <br><br>
-                <label for="password"> Clave: </label>
-                <input type="password" name="password" id="password" minlength="7" required>
+                <label for="password"> Clave: </label><br>
+                <input class="largotext" type="password" name="password" id="password" minlength="7" required>
                 <br><br>
-                <label for="password"> Confirmar clave: </label>
-                <input type="password" name="password2" minlength="7" required>
+                <label for="password"> Confirmar clave: </label><br>
+                <input class="largotext" type="password" name="password2" minlength="7" required>
 
             </fieldset>
             <br><br>
             <!--Aca se pone el correo, fieldset es el cuadro que rodea, legend el titulo del cuadro-->
             <fieldset>
                 <legend>Contacto </legend>
-                <label for="email">Correo Electronico:</label>
-                <input type="email" id="email" name="email" placeholder="nombre@dominio.cl" required>
+                <label for="email">Correo Electronico:</label><br>
+                <input class="largotext" type="email" id="email" name="email" placeholder="nombre@dominio.cl" required>
                 <br><br>
-                <label for="numero"> Telefono: </label>
-                <input type="number" name="numero" id="num" value="" min="10000000" max="99999999"
+                <label for="numero"> Telefono: </label><br>
+                <input class="largotext" type="number" name="numero" id="num" value="" min="10000000" max="99999999"
                     oninvalid="this.setCustomValidity('Por favor ingresa un numero de telefono')">
             </fieldset>
             <br><br>
             <fieldset>
-                <legend>Direccion </legend>
-                <label for="fdireccion"> Direccion: </label>
-                <input type="text" name="direccion" id="direc" value="" required>
+                <legend>Direccion </legend><br>
+                <label for="fdireccion"> Direccion: </label><br>
+                <input class="largotext" type="text" name="direccion" id="direc" value="" required>
                 <br><br>
-                <label for="postalcode"> Codigo postal: </label>
-                <input type="text" name="postalcode" id="direc" value="" required>
+                <label for="postalcode"> Codigo postal: </label><br>
+                <input class="largotext" type="text" name="postalcode" id="direc" value="" required>
                 <br><br>
             </fieldset>
+       
             <fieldset>
                 <legend>Tipo de recibo </legend>
                 <input type="radio" id="Boleta" name="sexo" value="Boleta" required>
@@ -109,6 +110,7 @@
                 <input type="radio" id="Factura" name="sexo" value="Factura" required>
                 <label for="Factura">Factura</label>
                 <br><br>
+           
             </fieldset>
             <div class="derecha">
                 <!--Boton para mandar alertas-->
@@ -119,8 +121,6 @@
                 <button class="btn btn-warning" type="reset">Limpiar</button>
                 <br><br>
             </div>
-
-
 
         </form>
     </div>
