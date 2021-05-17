@@ -194,6 +194,23 @@ font-size: 20px;
 color: #fff;
 }
 
+body {
+  background-color: black;
+}
+
+.reloj{
+  position: absolute;
+  left: calc(95% - 400px);
+  top: calc(46% - 400px);
+  width: 150px;
+  height: 150px;
+}
+
+.arregloreloj{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
   
 
 

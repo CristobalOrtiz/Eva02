@@ -13,54 +13,46 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
         crossorigin="anonymous"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.6.0.js"
-        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>>
     <link rel="stylesheet" href="ESTAIL/estail.css">
 </head>
 
-<body class="imgfondo" onload="alert('pls no presiones el boton de tocame :c')">
+<body class="imgfondo text-white " onload="alert('pls no presiones el boton de tocame :c')">
 
     <div class="container fondoDiv">
         <!-- Content here -->
 
         <!-- < El navbar para tener el pnche menu> -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark lineas">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark lineas" >
             <div class="container-fluid">
-                <a class="navbar-brand" href="zapallo.html"><img class="logo" src="img/logo.png"
-                        style="height: 50px; width: 100px;" alt="Pantalla inicio"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link" href="zapallo.html" onmouseover="style.color = 'orange'"
-                                onmouseout="style.color= 'white'" style="color: white;">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="quienes.html" onmouseover="style.color = 'orange'"
-                                onmouseout="style.color= 'white'" style="color: white;">Quiénes Somos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="fotos.html" onmouseover="style.color = 'orange'"
-                                onmouseout="style.color= 'white'" style="color: white;">Productos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="formulario.html" onmouseover="style.color = 'orange'"
-                                onmouseout="style.color= 'white'" style="color: white;">Registro Usuario</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="login.html" onmouseover="style.color = 'orange'"
-                                onmouseout="style.color= 'white'" style="color: white;">Inicio Sesión</a>
-                        </li>
-                    </ul>
-                </div>
+              <a class="navbar-brand" href="zapallo.html"><img class="logo" src="img/logo.png" style="height: 50px; width: 100px;"
+                alt="Pantalla inicio"></a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link" href="zapallo.html" onmouseover="style.color = 'orange'" onmouseout="style.color= 'white'"  style="color: white;">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="quienes.html" onmouseover="style.color = 'orange'" onmouseout="style.color= 'white'"  style="color: white;">Quiénes Somos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="fotos.html"  onmouseover="style.color = 'orange'" onmouseout="style.color= 'white'"  style="color: white;">Productos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="formulario.html"  onmouseover="style.color = 'orange'" onmouseout="style.color= 'white'"  style="color: white;">Registro Usuario</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="login.html"  onmouseover="style.color = 'orange'" onmouseout="style.color= 'white'"  style="color: white;">Inicio Sesión</a>
+                </li>
+                </ul>
+              </div>
             </div>
-        </nav>
-
+          </nav>
+        <div>
+            <div id="relojAnalogico" class="reloj"></div>
+          </div>
         <form class="lineas container fondoDiv" name="datos2" id="datos2" method="POST" action="felicidades.html">
            
             <fieldset>
@@ -89,7 +81,7 @@
                 <input class="largotext" type="email" id="email" name="email" placeholder="nombre@dominio.cl" required>
                 <br><br>
                 <label for="numero"> Telefono: </label><br>
-                <input class="largotext" type="number" name="numero" id="num" value="" min="10000000" max="99999999"
+                <input class="largotext" type="number" name="numero" id="numero" value="" minlength="8"
                     oninvalid="this.setCustomValidity('Por favor ingresa un numero de telefono')">
             </fieldset>
             <br><br>
@@ -172,6 +164,10 @@
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/jquery.validate.js"></script>
+    <script src="js/api.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"
+        integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>>
     <!-- Esto es un jquery -->
 
     <script>
@@ -227,6 +223,7 @@
                   password: "required",
                   nombre: "required",
                   apellido: "required",
+                  numero: "required",
                   password2: {
                       required: true,
                       equalTo: "#password"
@@ -243,6 +240,11 @@
                   required: 'Reingresa la contraseña',
                   equalTo: 'Las contraseñas ingresadas no coinciden',
                   minlength: 'Caracteres insuficientes'
+
+              },
+              numero: {
+                  required: 'Ingrese su numero',
+                  minlength: 'Numero incorrecto, por favor ingresa un numero válido'
 
               }
               
