@@ -56,18 +56,17 @@
     <!-- < Fin del navbar> -->
 
 
-    <form class="lineas container fondoDiv" name="datos" method="POST" action="completo.html">
+    <form class="lineas container fondoDiv" name="datos" id="datos" method="POST" action="completo.html">
 
         <div>
             <legend>Informacion de usuario </legend>
             <label for="fname"> Nombre: </label>
-            <input type="text" name="nombre" id="nom" value="" autofocus required>
+            <input type="text" name="nombre"   autofocus required>
             <br><br>
             <label for="lapellido"> Apellido: </label>
-            <input type="text" name="apellido" id="ape" value="" required>
+            <input type="text" name="apellido"   required>
             <br><br>
-            <label for="password"> Password: </label>
-            <input type="password" name="password" id="pass" value="" minlength="7" maxlength="12" required>
+            
         </div>
         <br><br>
 
@@ -96,7 +95,7 @@
 
 
 
-        <div class="derecha">
+        <div class="derecha" >
             <!--Boton para mandar alertas-->
             <button class="btn btn-warning" onclick="alert('Aaahhh....Onichan *Se Sonroja*')" value="Tocame"> Tócame </button>
             <!--Botones generales-->
@@ -109,6 +108,8 @@
 
     </form>
     </div>
+
+    
 
     <!-- inicio footer-->
     <footer class="py-5 bg-dark">
@@ -161,7 +162,9 @@
     <!-- Esto es un jquery para desiciones-->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
-
+   
+  
+  
     <script>
         jQuery(document).ready(function ($) {
             var form = $('form[name="datos"]'),
@@ -179,6 +182,8 @@
             });
         });
     </script>
+
+
     <!-- Fin del jquery-->
 </body>
 
