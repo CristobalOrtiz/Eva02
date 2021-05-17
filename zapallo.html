@@ -79,7 +79,10 @@
       </div>
       <!-- Información -->
       <hr>
-      <div class="AMOAPOKE my-0 textoBonito lineas" >
+      
+      <div class="elText my-0 textoBonito lineas" >
+        <button class="btn btn-warning">Si te molesta el color del texto, presioname</button>
+        <p> 
           <br> Cuando dos jovenes emprendedores decidieron volverse famosos decidieron crear una
           <br> página web dónde podrían vernder los productos gamer más cotizados del mercado
           <br> Estos jovenes llamados Rodrigo Gingins y Cristóbal Ortiz, también conocidos en sus
@@ -97,6 +100,7 @@
           <br>
           <br>
           <br>
+          </p>
 
       </div>
     </div>
@@ -144,5 +148,15 @@
   </div>
     </footer>
      <!-- final de footer -->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+     <script>
+     $(document).ready(function(){
+       $("button").click(function(){
+         $("p").css("color", "white");
+       });
+     });
+     </script>
+
+     
 </body>
 </html>

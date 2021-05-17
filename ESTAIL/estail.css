@@ -159,6 +159,11 @@ background-image: url("../img/fuegos.png");
   margin-bottom: 80px;
 }
 
-
+.elText{
+  color:rgb(243, 134, 9);
+    text-align: center;
+    font-family: cambria;
+    font-size: 25px;
+}
 
   
