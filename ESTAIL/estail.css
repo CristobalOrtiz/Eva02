@@ -121,7 +121,7 @@ hr{
     border-style: double;
     margin-bottom: 25px;
     margin-top: 25px;
-s
+
 }
 
 fieldset{
@@ -186,6 +186,12 @@ label.error {
   width:400px;
   margin-top: 18px;
   
+}
+
+.otaku{
+font-family: arial;
+font-size: 20px;
+color: #fff;
 }
 
   
